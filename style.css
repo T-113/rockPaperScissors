@@ -1,11 +1,5 @@
-html {
-    display: flex;
-    justify-content: center;
-}
-
-
 body {
-    background-color: grey;
+    background-color: grey;    
 }
 
 h1 {
@@ -20,7 +14,7 @@ button {
     height: 100px;
     background-color: white;
     color: black;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 
     5px 5px 10px white,
     -5px -5px -10px black;
