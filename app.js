@@ -15,8 +15,9 @@ function game() {
             playerSelection = button.className;
             const computerSelection = computerPlay();
             battleWinText.textContent = (play(playerSelection,computerSelection));
-
-
+            playerScoreText.textContent = "You Scored: "+ playerScore;
+            computerScoreText.textContent = "Computer Scored: "+ computerScore
+            
         })
     })
     function play(playerSelection, computerSelection) {
@@ -61,12 +62,39 @@ function game() {
          } 
 
     }
+    
+    
 }
 
-const container = document.querySelector('#container')
+const body = document.querySelector('body');
+const resultsDiv = document.createElement('div')
+resultsDiv.style.margin = "15px";
+resultsDiv.setAttribute("align", "center")
+body.appendChild(resultsDiv);
+
+
+
 const battleWinText = document.createElement('p');
-battleWinText.style.coloe = "blue";
-container.appendChild(battleWinText);
+battleWinText.style.color = "white";
+battleWinText.style.fontSize = "25px";
+resultsDiv.appendChild(battleWinText);
+
+const playerScoreText = document.createElement('p')
+playerScoreText.style.color = "white";
+playerScoreText.style.fontSize = "20px";
+resultsDiv.appendChild(playerScoreText);
+
+const computerScoreText = document.createElement('p');
+computerScoreText.style.color = "white";
+computerScoreText.style.fontSize = "20px";
+resultsDiv.appendChild(computerScoreText);
+
+const gameWinnerText = document.createElement('p')
+gameWinnerText.style.color = "purple"
+gameWinnerText.style.fontSize = "30px"
+resultsDiv.insertBefore(battleWinText, resultsDiv.children[0])
+
+
 
 
 
